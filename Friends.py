@@ -13,6 +13,7 @@ def f(C,Ci,A):
     sy=x/((20000*12)+200000)
     wahba=(120000*0.7)*16
     t=wahba/x
+    print ("Hey Buddy")
     print ("Your money in EGP: ", x)
     print ("Your money in USD: ", y)
     print ("Your money in CAD: ", z)

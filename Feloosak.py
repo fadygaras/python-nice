@@ -13,9 +13,10 @@ def Whatif(Am,Eu,St,fm):
     return Wi
     
 def main():
+    print("\033[1;32;40m Feloos Fady  \n")
     C=float(input("Enter CIB: "))
-    Ci=float(input("Enter Citibank: "))
-    A=float(input("Enter AAIB: "))
+    Ci=float(input("\nEnter Citibank: "))
+    A=float(input("\nEnter AAIB: "))
     Am=350000
     Eu=200000
     St=50000
@@ -24,18 +25,23 @@ def main():
     fm,fd=Feloos(C,Ci,A)
     fpy,fps=So7abak(fm,ypy,spy)
     Wi=Whatif(Am,Eu,St,fm)
-    print("Feloosak Masry: ",fm , "Feloosak Dollar: ",fd)
-    print("Youssef should work",fpy, "years to make Fady's money and Safi should work",fps, "years to make Fady's money")
-    yn=int(input("Would you like to see your money in CAD? Enter: 1 if yes and 0 if no "))
+    print("\033[1;31;40m")
+    print("Feloosak Masry: ",round(fm) , "\nFeloosak Dollar: ",round(fd))
+    print("\033[1;33;40m")
+    print("\nYoussef should work",round(fpy), "years to make Fady's money and \nSafi should work",round(fps), "years to make Fady's money")
+    print("\033[1;31;40m")
+    yn=int(input("\nWould you like to see your money in CAD? Enter: 1 if yes and 0 if no "))
     if yn==1:
-        print(fm/11)
+        print("Your money in CAD is= ",(round(fm/11)))
     else:
         print("OK")
-    
-    print("if Fady didn't go to the US and Europe, Youssef should work",(Wi/ypy),"years to make Fady's money and Safi should work", (Wi/spy), "years to make Fady's money")
+    print("\033[1;32;40m")
+    print("if Fady didn't go to the US and Europe, \nYoussef should work",round(Wi/ypy),"years to make Fady's money and \nSafi should work", round(Wi/spy), "years to make Fady's money")
     
 if __name__ == "__main__":
     main()
+
+
 
 
 

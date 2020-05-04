@@ -7,6 +7,17 @@ def So7abak(fm,ypy,spy):
     fpy=fm/ypy
     fps=fm/spy
     return fpy,fps
+    
+def Potential(fm):
+    sal=8*15000
+    pot=fm+sal
+    exp=100000+(27815*7)
+    fin=pot-exp
+    return fin
+
+def Post(fin):
+    post=fin+260000
+    return post
 
 def Whatif(Am,Eu,St,fm):
     Wi=(Am+Eu+St)+fm
@@ -25,8 +36,10 @@ def main():
     fm,fd=Feloos(C,Ci,A)
     fpy,fps=So7abak(fm,ypy,spy)
     Wi=Whatif(Am,Eu,St,fm)
+    fin=Potential(fm)
+    post=Post(fin)
     print("\033[1;31;40m")
-    print("Feloosak Masry: ",round(fm) , "\nFeloosak Dollar: ",round(fd))
+    print("Feloosak Masry: ",round(fm) , "\nFeloosak Dollar: ",round(fd), "\nWorst Case 2020: ",round(fin), "\nVancouver: ",round(post))
     print("\033[1;33;40m")
     print("\nYoussef should work",round(fpy), "years to make Fady's money and \nSafi should work",round(fps), "years to make Fady's money")
     print("\033[1;31;40m")
@@ -40,6 +53,7 @@ def main():
     
 if __name__ == "__main__":
     main()
+
 
 
 
